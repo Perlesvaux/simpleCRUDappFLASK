@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+  {% block head %}{% endblock %}
+
+
+  {% block body %}
+    <!-- <h1 class='dilate-shrink-ing'>test</h1> -->
+    <h1 id='task-master'>Task Master<h1>
+      {% if tasks|length < 1 %}
+      <div class='dilate-shrink-ing' style='color:purple; position:absolute; bottom:80%; width:100%;'>no tasks!</div>
+
+      {% else %}
+    <div class='contents'>
+
+      <table>
+        <tr>
+          <th>Task</th>
+          <th>Added</th>
+          <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+          <td>{{ task.content }}</td>
+          <td> {{ task.date_created.date() }} </td>
+          <td>
+            <a href="/delete/{{task.id}}">Delete</a>
+            <a href="/update/{{task.id}}">Update</a>
+          </td>
+        </tr>
+        {%endfor%}
+      </table>
+      {%endif%}
+
+      <form class="" action="/" method="POST">
+        <input type="text" id='content' name="content" value="" placeholder="New task">
+        <input type="submit" value="Add!">
+      </form>
+
+    </div>
+  {% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+  {% block head %}{% endblock %}
+
+
+  {% block body %}
+    <!-- <h1 class='dilate-shrink-ing'>test</h1> -->
+    <h1 id='task-master'>...updating task!<h1>
+    <div class='contents'>
+
+      <form class="" action="/update/{{task.id}}" method="POST">
+        <input type="text" id='content' name="content" value="{{task.content}}" placeholder="">
+        <input type="submit" value="Add!">
+      </form>
+
+    </div>
+  {% endblock %}

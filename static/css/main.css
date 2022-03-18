@@ -1,0 +1,35 @@
+#task-master{
+  font-size: 2em;
+  color: pink;
+  text-shadow: 2px 2px #ff0000;
+  text-align: center;
+}
+
+@keyframes dilate-shrink {
+  0% {font-size: 0.9em;}
+  53% {font-size: 1.0em;}
+  100% {font-size: 0.9em;}
+  /* from{background-color: black;}
+  to{background-color: white;} */
+}
+
+.dilate-shrink-ing {
+  animation-name: dilate-shrink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.contents > table{
+  border-collapse: collapse;
+  width:100%;
+}
+
+.contents >table tr:nth-child(even){background-color: #f2f2f2;}
+.contents >table tr:hover{background-color: pink;}
+.contents >table th{
+  padding-top:1.2em;
+  padding-bottom:1.2em;
+  text-align:left;
+  background-color: #04AA6D;
+  color: white;
+}
