@@ -10,6 +10,15 @@ app = Flask(__name__)
 #SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
 
+
+
+
+# #homepage.
+# @app.route('/')
+# def index():
+#     return "hell o' world"
+
+
 db = SQLAlchemy(app)
 
 
@@ -69,16 +78,16 @@ def update(id):
 
     else:
         return render_template('update.html', task = task_to_update)
-
-
-
-
-
-
-
-
-
-
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 
 
 
